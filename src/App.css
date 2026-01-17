@@ -1,38 +1,261 @@
+/* ===== BASE ===== */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: #242a33;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* ===== HEADER ===== */
+.app-header {
+  padding: 35px 20px 25px;
+  background-color: #242a33;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.app-title {
+  grid-column: 2;
+  font-size: 44px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.rp-logo {
+  grid-column: 3;
+  justify-self: end;
+  height: 52px;
+  background: white;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+/* ===== NAV ===== */
+.nav-links {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #5ee7ff;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* ===== HOME BANNER ===== */
+.home-banner {
+  margin-bottom: 30px;
+}
+
+.home-banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+
+/* ===== PAGE LAYOUT ===== */
+.page-container {
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 0 18px;
+  text-align: left;
+}
+
+.page-container h2 {
+  font-size: 34px;
+  margin: 0 0 14px 0;
+}
+
+.page-text {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.muted {
+  opacity: 0.85;
+}
+
+/* ===== SEARCH ===== */
+.search-input {
+  width: 100%;
+  max-width: 520px;
+  padding: 12px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(0,0,0,0.25);
+  color: white;
+  margin: 16px 0 10px;
+  outline: none;
+}
+
+/* ===== CARDS (Diplomas / Favourites) ===== */
+.card-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.card h3 {
+  margin: 0 0 10px 0;
+  font-size: 22px;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #5ee7ff;
+  text-decoration: underline;
+}
+
+.card-link:hover {
+  color: white;
+}
+
+/* ===== DIPLOMA DETAIL BOX ===== */
+.detail-box {
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.18);
+}
+
+.section-title {
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+
+/* ===== MODULES ===== */
+.module-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.module-card {
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+}
+
+.module-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.module-top b {
+  font-size: 18px;
+  line-height: 1.3;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.save-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.save-btn:hover {
+  background: rgba(94,231,255,0.22);
+  border-color: rgba(94,231,255,0.6);
+}
+
+/* Links inside module card */
+.module-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.module-links .card-link {
+  margin-top: 0;
+}
+
+/* Module Detail box */
+.module-detail {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px dashed rgba(255,255,255,0.25);
+  background: rgba(0,0,0,0.14);
+}
+
+/* ===== REGISTER FORM ===== */
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 18px;
+}
+
+.register-box {
+  width: 100%;
+  max-width: 460px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 26px;
+  border-radius: 14px;
+  text-align: left;
+}
+
+.register-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.register-form input,
+.register-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(0,0,0,0.25);
+  color: white;
+  outline: none;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 12px;
+  background: #5ee7ff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background: white;
 }
